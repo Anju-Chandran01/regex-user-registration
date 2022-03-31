@@ -20,7 +20,7 @@ public class UserRegistration {
         }
 
         //Last Name Validation
-        if (Pattern.matches(FIRST_NAME, firstName)) {
+        if (Pattern.matches(LAST_NAME, lastName)) {
             System.out.println("Valid last name");
         } else {
             System.out.println("Invalid");
