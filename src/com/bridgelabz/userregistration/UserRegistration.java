@@ -8,9 +8,16 @@ public class UserRegistration {
 
         final String FIRST_NAME = "^[A-Z][a-z]{2}[a-z]*";
         final String LAST_NAME = "^[A-Z][a-z]{2}[a-z]*";
+        final String USER_NAME = "^[A-Za-z][A-Za-z0-9+-]{2}[A-Za-z0-9+-]*([.][A-Za-z0-9]{2}[A-Za-z0-9]*)?";
+        final String DOMAIN = "\\@[a-z]{3}[a-z]*\\.[a-z]{2}[a-z]*([.][a-z]{2}[a-z]*)?";
+        final String PHONE_NO = "^([0-9]{2}[\\-])*[0-9]{10}$";
+        final String EMAIL = USER_NAME + DOMAIN;
 
         String firstName = "Amaya";
-        String lastName = "Prasanth";
+        String lastName = "Kishore";
+        String email = "amayakishore12@gmail.com";
+        String phoneNumber = "91 79218623";
+
 
         // First Name validation
         if (Pattern.matches(FIRST_NAME, firstName)) {
@@ -24,6 +31,20 @@ public class UserRegistration {
             System.out.println("Valid last name");
         } else {
             System.out.println("Invalid");
+        }
+
+        //Email Validation
+        if (Pattern.matches(EMAIL, email)) {
+            System.out.println("Valid email");
+        } else {
+            System.out.println("Invalid");
+        }
+
+        //Phone no: Validation
+        if (Pattern.matches(PHONE_NO, phoneNumber)) {
+            System.out.println("Valid phone number");
+        } else {
+            System.out.println("Invalid...");
         }
 
     }
