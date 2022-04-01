@@ -16,7 +16,7 @@ public class UserRegistration {
         String firstName = "Amaya";
         String lastName = "Kishore";
         String email = "amayakishore12@gmail.com";
-        String phoneNumber = "91 79218623";
+        String phoneNumber="91 7569862011";
 
 
         // First Name validation
@@ -44,7 +44,7 @@ public class UserRegistration {
         if (Pattern.matches(PHONE_NO, phoneNumber)) {
             System.out.println("Valid phone number");
         } else {
-            System.out.println("Invalid...");
+            System.out.println("Invalid");
         }
 
     }
