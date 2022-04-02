@@ -15,15 +15,14 @@ public class UserRegistration {
 
         final String PHONE_NO = "^([0-9]{2}[\\-])*[0-9]{10}$";
 
-        final String PASSWORD = "[0-9a-zA-Z]{8}[0-9a-zA-Z]*";
-
-        final String PASSWORD_ONE = ".*[A-Z].*";
+        // PASSWORD
+        final String PASSWORD = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}$";
 
         String firstName = "Amaya";
         String lastName = "Kishore";
         String email = "amayakishore12@gmail.com";
         String phoneNumber = "91 79218623";
-        String password = "examplepassword";
+        String password = "Examplepassword1";
 
         // First Name validation
         if (Pattern.matches(FIRST_NAME, firstName)) {
@@ -54,7 +53,7 @@ public class UserRegistration {
         }
 
         //Password Validation
-        if (Pattern.matches(PASSWORD, password ) && Pattern.matches(PASSWORD_ONE, password)) {
+        if (Pattern.matches(PASSWORD, password )) {
             System.out.println("Valid password");
         } else {
             System.out.println("Invalid");
